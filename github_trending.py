@@ -27,15 +27,16 @@ def print_repositoies(repositories):
     print('Most usable repositories:')
     delimiter = '-' * 50
     for repo in repositories:
-        name = repo['full_name']
-        stars = repo['stargazers_count']
-        open_issues = repo['open_issues']
-        url = repo['html_url']
         print(delimiter)
         print(
             'Name: {0}\n'
             'Stars: {1} Open issues: {2}\n'
-            'Url: {3}'.format(name, stars, open_issues, url)
+            'Url: {3}'.format(
+                repo['full_name'],
+                repo['stargazers_count'],
+                repo['open_issues'],
+                repo['html_url']
+            )
         )
 
 
