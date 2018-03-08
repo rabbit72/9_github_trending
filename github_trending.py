@@ -49,5 +49,3 @@ if __name__ == '__main__':
         print_repositoies(most_usable_repo)
     except requests.exceptions.ConnectionError:
         exit('Сheck your connection')
-    except IndexError:
-        exit('Received data are not correct')
