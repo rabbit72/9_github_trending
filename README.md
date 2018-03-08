@@ -16,19 +16,18 @@ Running on Windows is similar.
 
 ```bash
 $ python3 github_trending.py
-Most usable repositories:
 --------------------------------------------------
-Name: nswbmw/node-in-debugging
-Stars: 1856 Open issues: 0
-Url: https://github.com/nswbmw/node-in-debugging
+Full name: llSourcell/Learn_Machine_Learning_in_3_Months
+Stars: 2318 Open issues: 3
+Url: https://github.com/llSourcell/Learn_Machine_Learning_in_3_Months
 --------------------------------------------------
-Name: gocn/knowledge
-Stars: 838 Open issues: 0
+Full name: gocn/knowledge
+Stars: 921 Open issues: 0
 Url: https://github.com/gocn/knowledge
 --------------------------------------------------
-Name: lukakerr/NSWindowStyles
-Stars: 291 Open issues: 0
-Url: https://github.com/lukakerr/NSWindowStyles
+Full name: NoelFB/Celeste
+Stars: 886 Open issues: 3
+Url: https://github.com/NoelFB/Celeste
 ```
 
 # Project Goals
