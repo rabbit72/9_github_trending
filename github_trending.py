@@ -6,8 +6,7 @@ def get_date_days_ago(days_count):
     return date.today() - timedelta(days=days_count)
 
 
-def get_trending_repositories(top_size, days_ago):
-    date_ago = get_date_days_ago(days_ago)
+def get_trending_repositories(top_size, date_ago):
     url_search_repo = 'https://api.github.com/search/repositories'
     parameters = {
         'q': 'created:>={0}'.format(date_ago),
@@ -43,8 +42,9 @@ def print_repositoies(repositories):
 if __name__ == '__main__':
     repo_count = 20
     days_ago = 7
+    date_ago = get_date_days_ago(days_ago)
     try:
-        top_repo = get_trending_repositories(repo_count, days_ago)
+        top_repo = get_trending_repositories(repo_count, date_ago)
         most_usable_repo = get_most_usable_repositories(top_repo)
         print_repositoies(most_usable_repo)
     except requests.exceptions.ConnectionError:
