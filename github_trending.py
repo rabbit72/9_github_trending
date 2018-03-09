@@ -7,11 +7,11 @@ def get_date_days_ago(days_count):
 
 
 def get_trending_repositories(url_api, top_size, date_ago):
-    url_search_repo = url_api + '/search/repositories'
+    url_search_repo = '{0}/search/repositories'.format(url_api)
     parameters = {
         'q': 'created:>={0}'.format(date_ago),
         'sort': 'stars',
-        'per_page': '{0}'.format(top_size)
+        'per_page': top_size
     }
     response = requests.get(url_search_repo, params=parameters)
     list_top_repo = response.json()['items']
@@ -19,7 +19,7 @@ def get_trending_repositories(url_api, top_size, date_ago):
 
 
 def get_open_issues_amount(url_api, repo_full_name):
-    url_open_issues = url_api + '/repos/{0}/issues'.format(repo_full_name)
+    url_open_issues = '{0}/repos/{1}/issues'.format(url_api, repo_full_name)
     open_issues_count = len(requests.get(url_open_issues).json())
     return open_issues_count
 
