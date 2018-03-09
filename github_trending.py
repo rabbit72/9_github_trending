@@ -13,8 +13,8 @@ def get_trending_repositories(url_api, top_size, date_ago):
         'sort': 'stars',
         'per_page': '{0}'.format(top_size)
     }
-    raw_top_repo = requests.get(url_search_repo, params=parameters)
-    list_top_repo = raw_top_repo.json()['items']
+    response = requests.get(url_search_repo, params=parameters)
+    list_top_repo = response.json()['items']
     return list_top_repo
 
 
